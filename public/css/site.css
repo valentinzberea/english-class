@@ -1,0 +1,4 @@
+body { background: #eee;}
+h3 {text-align:center;}
+#definitions li{list-style-type:decimal; }
+#definitions input {font-size: 18px;border-style:none;width:100px;text-align:center;}
