@@ -7,6 +7,10 @@ class App
 		def title
 			'AIR TRAVEL Crossword Puzzles'
 		end
+		def questions
+			air_travel = Puzzles::AirTravel.new
+			air_travel.all_questions
+		end
     end
   end
 end

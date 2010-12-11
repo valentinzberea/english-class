@@ -1,6 +1,8 @@
 require 'rubygems' if RUBY_VERSION < "1.9"
 require 'sinatra/base'
 require 'mustache/sinatra'
+require 'json'
+require 'services/air_travel_puzzle.rb'
 
 class App < Sinatra::Base
   register Mustache::Sinatra
@@ -15,8 +17,7 @@ class App < Sinatra::Base
   }
 
   get '/' do
-    @title = "6th Moment"
     mustache :index
   end
-
+  
 end
