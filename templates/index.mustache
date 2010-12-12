@@ -5,10 +5,15 @@
 	
 	<div data-role="content">
 		<p>{{task_description}}</p>
+		<ul id="puzzle">
+			{{# questions }}
+				<li class="hint">{{num}} {{hint}}</li>
+			{{/ questions }}
+		</ul>
 		<ul id="definitions" data-role="listview" data-inline="true" data-theme="c" data-dividertheme="b">
 			<li data-role="list-divider">Definitions</li> 
 			{{# questions }}
-				<li><a href="/response/{{num}}" data-rel="dialog" data-transition="slideup" >{{num}}. {{text}}</a></li>
+				<li><a href="/response/{{num}}" data-transition="pop" >{{num}}. {{text}}</a></li>
 			{{/ questions }}
 		</ul>
 	</div>

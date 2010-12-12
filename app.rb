@@ -33,4 +33,9 @@ class App < Sinatra::Base
 	mustache :response
   end
   
+  post '/respond' do
+	response = params[:response]
+	redirect '/'
+  end
+  
 end

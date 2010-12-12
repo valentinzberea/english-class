@@ -65,5 +65,9 @@ module Puzzles
 				return foundQuestions.first
 			end
 		end
+		
+		def get_puzzle(questions)
+
+		end
 	end
 end
