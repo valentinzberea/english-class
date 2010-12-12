@@ -8,34 +8,11 @@
 	
 	<script src="http://code.jquery.com/jquery-1.4.3.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.0a2/jquery.mobile-1.0a2.min.js"></script>
-	<script src="lib/jquery.maskedinput-1.2.2.min.js"></script>
 	<script src="app.js"></script>
     
 	<title>English Class</title>
   </head>
   <body>
-	
-    <div data-role="page" data-theme="b" >
-		<div id="title">
-			<h3>{{title}}</h3>
-		</div>
-		
-		<div data-role="content">
-			
-			<div id="task">
-				<p>{{task_description}}</p>
-			</div>
-			<div id="content">
-				{{{yield}}}
-			</div>
-			
-			<div id="workspace">
-				
-			</div>
-			<div id="action">
-			</div>
-			
-		</div>
-    </div>
+	{{{yield}}}
   </body>
 </html>

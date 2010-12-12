@@ -2,14 +2,13 @@ class App
   module Views
     class Index < Layout
 		def task_description
-			'Use the clues to complete the puzzle.'
+			@task_description
 		end
 		def title
-			'AIR TRAVEL Crossword Puzzles'
+			@title
 		end
 		def questions
-			air_travel = Puzzles::AirTravel.new
-			air_travel.all_questions
+			@questions
 		end
     end
   end
