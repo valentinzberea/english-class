@@ -1,11 +1,11 @@
 <div data-role="page" data-theme="b" >
 	<form action="/respond" method="post">
 		<div data-role="header" data-theme="d" data-position="inline">	
-			<h1>Definition {{question_num}}</h1>
+			<h1>Definition {{definition_num}}</h1>
 		</div>
 		<div data-role="content" data-theme="c">
-			<input type="hidden" id="num" name="num" value="{{question_num}}" />
-			<h1>{{question_num}}. {{question_text}}</h1>
+			<input type="hidden" id="num" name="num" value="{{definition_num}}" />
+			<h1>{{definition_num}}. {{definition_text}}</h1>
 			<h1 class="hint">{{response_hint}}</h1>
 			
 			<div data-role="fieldcontain">

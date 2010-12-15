@@ -6,15 +6,15 @@
 	<div data-role="content">
 		<p>{{task_description}}</p>
 		<ul id="puzzle">
-			{{# questions }}
-				<li class="hint">{{num}} {{hint}}</li>
-			{{/ questions }}
+			{{# puzzle_items }}
+				<li class="hint">{{to_s}}</li>
+			{{/ puzzle_items }}
 		</ul>
 		<ul id="definitions" data-role="listview" data-inline="true" data-theme="c" data-dividertheme="b">
 			<li data-role="list-divider">Definitions</li> 
-			{{# questions }}
+			{{# definitions }}
 				<li><a href="/response/{{num}}" data-transition="pop" >{{num}}. {{text}}</a></li>
-			{{/ questions }}
+			{{/ definitions }}
 		</ul>
 	</div>
 </div>

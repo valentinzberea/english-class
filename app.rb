@@ -21,14 +21,15 @@ class App < Sinatra::Base
 	@title = 'AIR TRAVEL Crossword Puzzles'
 	
 	air_travel = Puzzles::AirTravel.new
-	@questions = air_travel.all_questions
+	@definitions = air_travel.all_definitions
+	@puzzle_items = air_travel.get_puzzle
     
 	mustache :index
   end
   
   get '/response/:num' do
 	air_travel = Puzzles::AirTravel.new
-	@question = air_travel.question(params[:num].to_i)
+	@definition = air_travel.definition(params[:num].to_i)
 	
 	mustache :response
   end

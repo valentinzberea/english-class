@@ -3,4 +3,5 @@ h3 {text-align:center;}
 #definitions input {font-size: 18px;border-style:none;width:100px;text-align:center;}
 a {display: table-cell;}
 .hint{letter-spacing:5px;}
-#puzzle li{list-style-type:none; }
+#puzzle li{list-style-type:none; white-space: pre; font-size: 22px; font-family: Courier;}
+#puzzle {padding-bottom:10px;}

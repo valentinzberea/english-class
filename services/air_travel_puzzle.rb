@@ -2,7 +2,7 @@ module Puzzles
 	class AirTravel
 		
 		def initialize
-			@questions = [
+			@definitions = [
 				{
 					:num => 1,
 					:text => "an area of land where aircraft can land and take off, be kept, repaired, etc.",
@@ -55,19 +55,44 @@ module Puzzles
 				}]
 		end
 		
-		def all_questions
-			@questions
+		def all_definitions
+			@definitions
 		end
 		
-		def question(question_num)
-			foundQuestions = @questions.select{ |q| q[:num] == question_num}
-			unless foundQuestions.empty?
-				return foundQuestions.first
+		def definition(definition_num)
+			foundDefinitions = @definitions.select{ |q| q[:num] == definition_num}
+			unless foundDefinitions.empty?
+				return foundDefinitions.first
 			end
 		end
 		
-		def get_puzzle(questions)
+		def get_pivot s
+			s.index(/[a-zA-Z\-]+/)
+		end
 
+		def get_puzzle
+			
+			to_be_just = []
+			pivot = 0
+			@definitions.each do |q| 
+				current_hint = q[:num].to_s.rjust(2) + ' ' + q[:hint]
+				current_pivot = get_pivot(current_hint)
+				pivot = [pivot, current_pivot].max
+				to_be_just.push(current_hint)
+			end
+
+			result = []
+			to_be_just.each do |hint|
+				hint_pivot = get_pivot(hint)
+				if hint_pivot < pivot
+					result.push(hint.rjust(hint.length + pivot - hint_pivot, ' '))
+				else
+					result.push(hint)
+				end
+			end
+
+			return result
+			
 		end
 	end
 end

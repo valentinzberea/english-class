@@ -1,14 +1,14 @@
 class App
   module Views
     class Response < Layout
-		def question_text
-			@question[:text]
+		def definition_text
+			@definition[:text]
 		end
 		def response_hint
-			@question[:hint]
+			@definition[:hint]
 		end
-		def question_num
-			@question[:num]
+		def definition_num
+			@definition[:num]
 		end
     end
   end

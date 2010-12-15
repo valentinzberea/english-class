@@ -7,8 +7,11 @@ class App
 		def title
 			@title
 		end
-		def questions
-			@questions
+		def definitions
+			@definitions
+		end
+		def puzzle_items
+			@puzzle_items
 		end
     end
   end
