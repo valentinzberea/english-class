@@ -7,7 +7,7 @@
 		<p>{{task_description}}</p>
 		<ul id="puzzle">
 			{{# puzzle_items }}
-				<li class="hint">{{to_s}}</li>
+				<li class="hint {{response_class}}">{{hint}}</li>
 			{{/ puzzle_items }}
 		</ul>
 		<ul id="definitions" data-role="listview" data-inline="true" data-theme="c" data-dividertheme="b">
@@ -16,5 +16,6 @@
 				<li><a href="/response/{{num}}" data-transition="pop" >{{num}}. {{text}}</a></li>
 			{{/ definitions }}
 		</ul>
+		
 	</div>
 </div>

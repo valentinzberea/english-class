@@ -13,6 +13,9 @@ class App
 		def puzzle_items
 			@puzzle_items
 		end
+		def last_response
+			@last_response
+		end
     end
   end
 end
