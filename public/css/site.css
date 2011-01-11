@@ -4,5 +4,5 @@ h3 {text-align:center;}
 a {display: table-cell;}
 .hint{letter-spacing:5px;font-weight:bold;}
 .last_response {color:#456F9A;}
-#puzzle li{list-style-type:none; white-space: pre; font-size: 22px; font-family: Courier;}
+#puzzle li{list-style-type:none; white-space: pre; font-size: 18px; font-family: Courier;}
 #puzzle {padding-bottom:10px;}
