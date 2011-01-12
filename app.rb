@@ -49,8 +49,6 @@ class App < Sinatra::Base
 	if result[:success]
 		puzzle_item = puzzle_item.sub(/([_\-]|[A-Z\-])*$/, result[:response])
 		get_puzzle[definition_num - 1] = { :response_class => 'last_response', :hint => puzzle_item}
-	else
-		get_puzzle[definition_num - 1] = { :response_class => '', :hint => puzzle_item}
 	end
 	redirect '/'
   end
