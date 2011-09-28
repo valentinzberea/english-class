@@ -2,18 +2,20 @@ require 'rubygems' if RUBY_VERSION < "1.9"
 require 'sinatra/base'
 require 'mustache/sinatra'
 require 'json'
-require 'services/air_travel_puzzle.rb'
+require File.expand_path('../services/air_travel_puzzle.rb', __FILE__)
 
 class App < Sinatra::Base
-  register Mustache::Sinatra
-  require 'views/layout'
 
   set :root, File.dirname(__FILE__)
-  set :public, 'public/'
+
+  register Mustache::Sinatra
+  require "#{root}/views/layout"
+
+  set :public, "#{root}/public/"
 
   set :mustache, {
-    :views => 'views/',
-    :templates => 'templates/'
+    :views => "#{root}/views/",
+    :templates => "#{root}/templates/"
   }
 
   use Rack::Session::Pool
