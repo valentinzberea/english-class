@@ -1,5 +1,3 @@
 This is simple mobile web application written for an english teacher.
 
 I used sinatra for the server and jquery mobile on client.
-
-Application is deployed on heroku: http://english-class.heroku.com/
